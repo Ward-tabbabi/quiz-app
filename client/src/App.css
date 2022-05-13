@@ -1,0 +1,83 @@
+
+
+
+body {
+  background-color: #c1d343;
+}
+
+
+/*************QUESTION*********/
+
+.QuestionInputs {
+  width: min(75%, 600px);
+  margin: 80px auto !important;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: #ff6600;
+  color: gray;
+}
+.Num {
+  width: 25px;
+  height: 25px;
+  top: 10px;
+  left: 10px;
+  color: blue;
+}
+.buttons {
+  display: flex;
+  margin-top: 20px;
+  width: 600px;
+  justify-content: space-between;
+}
+.QuestionInputs input {
+  width: 570px;
+  background-color: #990000;
+  padding: 10px;
+  color: gray;
+  margin-top: 15px;
+  border-radius: 8px;
+}
+
+.Prev {
+  width: 100px;
+  height: 30px;
+
+  color: blue;
+}
+.Next {
+  width: 100px;
+  height: 30px;
+
+  color: blue;
+}
+/***************QUIZ******************/
+
+.Quiz {
+  width: min(75%, 600px);
+  margin: 80px auto;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: #990000;
+  color: gray;
+}
+.Quiz input {
+  width: min(75%, 570px);
+  background-color: #ff6600;
+  padding: 10px;
+  color: gray;
+  margin-top: 15px;
+  border-radius: 8px;
+}
+.btn-next {
+  background-color: whitesmoke;
+  margin-top: 15px;
+  width: 100px;
+  height: 30px;
+  bottom: 10px;
+  margin-left: 10px;
+  color: blue;
+}
