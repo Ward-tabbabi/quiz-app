@@ -1,83 +1,522 @@
-
-
-
-body {
-  background-color: #c1d343;
-}
-
-
-/*************QUESTION*********/
-
-.QuestionInputs {
-  width: min(75%, 600px);
-  margin: 80px auto !important;
-  border-radius: 10px;
-  padding: 10px;
+/******************quiz***************************/
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+.Quiz {
+  background-color: white;
+  width: 750px;
+  top: 130px;
+  /* padding: 80px 0; */
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  background-color: #ff6600;
-  color: gray;
+  padding-bottom: 20px;
+  position: relative;
+
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
-.Num {
-  width: 25px;
-  height: 25px;
+.Quiz h1 {
+  margin-left: 40px;
+}
+.QuizInputs {
+  margin: 0 auto;
+  align-items: center;
+}
+.QuizInputs h1 {
+  position: absolute;
   top: 10px;
   left: 10px;
-  color: blue;
-}
-.buttons {
-  display: flex;
-  margin-top: 20px;
-  width: 600px;
-  justify-content: space-between;
-}
-.QuestionInputs input {
-  width: 570px;
-  background-color: #990000;
-  padding: 10px;
-  color: gray;
-  margin-top: 15px;
-  border-radius: 8px;
 }
 
-.Prev {
-  width: 100px;
-  height: 30px;
-
-  color: blue;
+.QuizInputs input {
+  width: 650px;
+  margin: 5px 30px;
+  /* background-color: aqua; */
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 15px;
+  /* border: none; */
+  outline: none;
 }
-.Next {
-  width: 100px;
-  height: 30px;
-
-  color: blue;
-}
-/***************QUIZ******************/
-
-.Quiz {
-  width: min(75%, 600px);
-  margin: 80px auto;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  background-color: #990000;
-  color: gray;
-}
-.Quiz input {
-  width: min(75%, 570px);
-  background-color: #ff6600;
-  padding: 10px;
-  color: gray;
-  margin-top: 15px;
-  border-radius: 8px;
+.QuizInputs .INP1 {
+  width: 300px;
 }
 .btn-next {
-  background-color: whitesmoke;
-  margin-top: 15px;
+  position: absolute;
   width: 100px;
-  height: 30px;
-  bottom: 10px;
+  background-color: rgba(255, 255, 0, 0.733);
+  padding: 10px;
+  font-weight: bold;
+  top: 84%;
+  right: 50px;
+  border-radius: 5px;
+}
+/************************ADDQuestion************/
+.QuestionInputs {
+  width: 60%;
+
+  margin: 120px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.Qinputs {
+  width: 750;
+  height: 80%;
+}
+.Qinputs input {
+  width: 90%;
+  padding: 8px;
+  margin: 20px 30px;
+  border-radius: 5px;
+  background-color: aquamarine;
+}
+.questionInput {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.questionInput input {
+  width: 80%;
+  margin: 30px;
+  border-radius: 6px;
+  padding: 10px;
+}
+.buttons {
+  width: 90%;
+  height: 50px;
+  margin: 30px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.buttons .Prev {
+  padding: 10px 35px;
+  background-color: #6dd3ec;
+  border-radius: 4px;
+  margin-left: 30px;
+}
+.buttons .Next {
+  padding: 8px 35px;
+  background-color: #6dd3ec;
+  border-radius: 4px;
+}
+.buttons .Fin {
+  width: 100px;
+  padding: 8px;
+  background-color: #6dd3ec;
+  border-radius: 8px;
+}
+.Num {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #6dd3ec;
+  font-weight: bold;
+}
+/*************Question*****************/
+.Question {
+  width: 80%;
+  margin: 80px auto;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
+    rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+}
+.Question h1 {
+  width: 200px;
+  height: 200px;
   margin-left: 10px;
+  border-radius: 50%;
+  padding-top: 140px;
+  padding-left: 15px;
+  background-color: aquamarine;
+  color: white;
+}
+.Qbody {
+  width: 85%;
+  align-items: center;
+}
+.Qbody h2 {
+  padding-left: 20px;
+
+  color: black;
+  font-size: 50px;
+}
+.Qbody h3 {
+  color: aquamarine;
+  font-size: 20px;
+  padding-left: 50px;
+}
+/***************AdminDashbord**************/
+.dash-admin {
+  width: 80%;
+  margin: 100px auto;
+  border: 2px solid burlywood;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+  display: flex;
+  justify-content: space-around;
+}
+/*****USERLIST***********/
+.userList {
+  width: 30%;
+  margin: 80px auto;
+  background-color: antiquewhite;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+.userList ul {
+  list-style: none;
+  padding-top: 10px;
+}
+.userList ul li {
+  font-size: 20px;
+  background-color: red;
+  margin-top: 10px;
+  color: black;
+}
+.userList h1 {
+  color: red;
+  font-weight: bold;
+  font-size: large;
+}
+/******QUIZLIST*********/
+
+.quizlist {
+  width: 30%;
+  margin: 80px auto;
+  background-color: antiquewhite;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+.quizlist h1 {
+  color: red;
+  font-weight: bold;
+  font-size: large;
+}
+.quizlist ul {
+  list-style: none;
+  padding-top: 10px;
+}
+.quizlist ul li {
+  font-size: 20px;
+  background-color: red;
+  margin-top: 10px;
+  color: black;
+}
+
+/******************Navbar******************/
+.navigation {
+  /* background-color: aqua; */
+  /* box-sizing: border-box; */
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  display: flex;
+  z-index: 9999;
+  justify-content: space-around;
+  background-color: #6dd3ec;
+  align-items: center;
+}
+.navigation img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+.navigation ul {
+  display: flex;
+  justify-content: space-around;
+}
+.navigation ul li {
+  margin-left: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.navigation input {
+  color: black;
+  padding: 10px;
+  width: 200px;
+  border-radius: 5px;
+  border: 1px solid #6a6a8560;
+}
+.navigation .filter button {
+  padding: 15px 20px;
+  border-radius: 4px;
+  background-color: #63b370;
+}
+.navigation .sign {
+  /* width: 200px; */
   color: blue;
+  /* margin-left: 50px; */
+  font-weight: bold;
+}
+.navigation .sign button {
+  padding: 10px 30px;
+  border: none;
+  border-radius: 4px;
+  margin-left: 20px;
+  background-color: white;
+}
+.navigation .sign button {
+  font-weight: bold !important;
+  color: #525252;
+}
+.navigation .sign button a {
+  font-weight: bold !important;
+  color: #525252;
+}
+/********************Home******************************/
+
+.linding {
+  display: flex;
+  justify-content: space-between;
+  /* background-image: url("https://cdn2.vectorstock.com/i/1000x1000/53/86/creative-word-concept-quiz-and-people-doing-vector-22485386.jpg"); */
+  /* background-repeat: no-repeat;
+  background-size: contain; */
+  padding-top: 100px;
+}
+.linding .Home {
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 100px;
+  margin-left: 150px;
+}
+.linding .Home h1 {
+  color: #6a6a85;
+}
+.linding .Home button {
+  padding: 15px 40px;
+  /* background-color: aqua; */
+  margin: 10px;
+  border-radius: 4px;
+}
+.list-categories {
+  border: 1px solid rgb(197, 197, 197);
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+.list-categories h1 {
+  font-weight: bold;
+  font-size: 30px;
+  margin-left: 50px;
+  color: #57af9c;
+}
+.linding ul {
+  margin-right: 80px;
+  /* border: 5px solid pink; */
+}
+.linding ul li {
+  width: 200px;
+  font-weight: bold;
+  font-size: 18px;
+  /* border: 1px solid blue; */
+  color: white;
+  background-color: #63b370;
+  border-radius: 5px;
+  margin-top: 20px;
+  padding: 10px;
+  margin-right: 20px;
+}
+/*************QuizRules***************/
+.Rules {
+  width: 40%;
+  height: 600px;
+  margin: 50px auto;
+  padding: 50px;
+  border: 2px solid red;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+  border-bottom-right-radius: 150px;
+}
+.Rules h1 {
+  font-size: 30px;
+  font-weight: bold;
+  color: blueviolet;
+  margin-bottom: 75px;
+}
+.Rules p {
+  font-size: 30px;
+  margin-top: 40px;
+  color: rgb(247, 154, 169);
+}
+
+.logo1 {
+  font-family: "Press Start 2P', cursive;";
+  color: "white";
+  font-size: 50px;
+}
+/**************************about**********************/
+.Cabout {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  background-image: url("https://previews.123rf.com/images/michaeljayfoto/michaeljayfoto1702/michaeljayfoto170200098/71173186-boy-with-quiz-text-on-grunge-background-writing-and-thinking-copy-space.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.about {
+  position: absolute;
+  width: 50%;
+  height: 300px;
+  margin-top: 340px;
+  margin-left: 700px;
+  padding: 20px;
+}
+.about h1 {
+  color: black;
+  font-size: 30px;
+}
+.about p {
+  color: rgb(126, 60, 60);
+  font-size: 25px;
+}
+/************************ quizzes index*************/
+
+.index {
+  width: 50%;
+  height: 500px;
+  position: relative;
+  background-image: url("https://img.maximummedia.ie/joe_ie/eyJkYXRhIjoie1widXJsXCI6XCJodHRwOlxcXC9cXFwvbWVkaWEtam9lLm1heGltdW1tZWRpYS5pZS5zMy5hbWF6b25hd3MuY29tXFxcL3dwLWNvbnRlbnRcXFwvdXBsb2Fkc1xcXC8yMDIxXFxcLzExXFxcLzEwMTI0NzEzXFxcL2lTdG9jay0xMzA1MTY5Nzc2LmpwZ1wiLFwid2lkdGhcIjo0NDMsXCJoZWlnaHRcIjoyNDgsXCJkZWZhdWx0XCI6XCJodHRwczpcXFwvXFxcL3d3dy5qb2UuaWVcXFwvYXNzZXRzXFxcL2ltYWdlc1xcXC9qb2VcXFwvbm8taW1hZ2UucG5nP2lkPTI2NGEyZGJlMzcwZjJjNjc1ZmNkXCIsXCJvcHRpb25zXCI6e1wib3V0cHV0XCI6XCJ3ZWJwXCJ9fSIsImhhc2giOiJiNmNiMWZjM2U0ZmIzNzY4ZTAyOWI5MDdkMTNlMjNiYTJlN2ZlMWY2In0=/quiz-get-yourself-thinking-with-this-general-knowledge-quiz.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 130px auto;
+  padding: 50px;
+  color: white;
+}
+.index h1 {
+  font-weight: bold;
+  font-size: 30px;
+}
+.index h2 {
+  font-weight: bold;
+  font-size: 25px;
+}
+.index p {
+  font-weight: bold;
+  font-size: 15px;
+}
+.index button {
+  position: absolute;
+  padding: 10px 40px;
+  border-radius: 5px;
+  color: #63b370;
+  bottom: 20px;
+  right: 50px;
+}
+/********************LOGIN******************/
+.LoginContainer {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("https://www.presanse-pacacorse.org/image/5066/3570?size=!800,800&region=full&format=jpg&crop=centre&realWidth=640&realHeight=640");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.login {
+  width: 50%;
+
+  position: relative;
+  margin: 130px auto;
+}
+.login h4 {
+  font-weight: bold;
+  font-size: 25px;
+  margin-top: 100px;
+}
+.login h4 a {
+  color: #6a6a85;
+  border-bottom: 2px solid rebeccapurple;
+}
+.login h1 {
+  font-weight: bold;
+  font-size: 40px;
+}
+.login button {
+  position: absolute;
+  padding: 10px 35px;
+  border-radius: 5px;
+  bottom: 0;
+  right: 150px;
+}
+.LoginInput {
+  width: 80%;
+  margin: auto;
+}
+.LoginInput h2 {
+  font-size: 30px;
+}
+.LoginInput input {
+  padding: 10px 100px;
+  border-radius: 5px;
+  color: #6a6a85;
+}
+/********************** Register********************/
+.regContainer {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("https://www.presanse-pacacorse.org/image/5066/3570?size=!800,800&region=full&format=jpg&crop=centre&realWidth=640&realHeight=640");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.register {
+  width: 50%;
+  position: relative;
+  margin: 130px auto;
+}
+.register h4 {
+  font-weight: bold;
+  font-size: 25px;
+  margin-top: 50px;
+}
+.register h4 a {
+  color: #6a6a85;
+  border-bottom: 2px solid rebeccapurple;
+}
+.register h1 {
+  font-weight: bold;
+  font-size: 40px;
+}
+.register button {
+  position: absolute;
+  padding: 10px 35px;
+  border-radius: 5px;
+  bottom: 0px;
+  right: 150px;
+}
+.regInputs {
+  width: 80%;
+  margin: auto;
+}
+.regInputs h2 {
+  font-size: 30px;
+}
+.regInputs input {
+  padding: 10px 100px;
+  border-radius: 5px;
+  color: #6a6a85;
+}
+/*******************CARD BEFORE QUIZE***********/
+.SQContainer {
+  width: 90%;
+  margin-top: 200px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.SmallCard {
+  width: 250px;
+  height: 200px;
+  margin-top: 30px;
+  color: #ffffff;
+  background-color: #6dd3ec;
+  text-align: center;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+
+.SmallCard p {
+  font-weight: 800;
+  height: 40px;
+  color: #6dd3ec;
+  background-color: rgb(255, 255, 255);
 }

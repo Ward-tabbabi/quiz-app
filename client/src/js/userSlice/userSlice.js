@@ -20,6 +20,16 @@ export const userLogin = createAsyncThunk("user/login", async (user) => {
     console.log(error);
   }
 });
+export const userCurrent = createAsyncThunk("user/current", async () => {
+  try {
+    let response = await axios.get("http://localhost:5000/user/current", {
+      headers: { Authorization: localStorage.getItem("token") },
+    });
+    return response;
+  } catch (error) {
+    console.log(error);
+  }
+});
 const initialState = {
   user: null,
   status: null,
@@ -53,6 +63,17 @@ export const userSlice = createSlice({
       localStorage.setItem("token", action.payload.data.token);
     },
     [userLogin.rejected]: (state, action) => {
+      state.status = "Fail";
+    },
+    [userCurrent.pending]: (state, action) => {
+      state.status = "pinding";
+    },
+    [userCurrent.fulfilled]: (state, action) => {
+      state.status = "fulfilled";
+      // state.msg = action.payload.data.msg;
+      state.user = action.payload.data.user;
+    },
+    [userCurrent.rejected]: (state, action) => {
       state.status = "Fail";
     },
   },

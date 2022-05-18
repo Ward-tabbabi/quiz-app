@@ -13,39 +13,41 @@ const Register = () => {
   const msg = useSelector((state) => state.user.msg);
 
   return (
-    <div>
-      <h1>You are welcome</h1>
-      <div className="regInputs">
-        <h2>Name</h2>
-        <input
-          type="text"
-          placeholder="put your name"
-          onChange={(e) => setUser({ ...user, name: e.target.value })}
-        />
-        <h2>lastName</h2>
-        <input
-          type="text"
-          placeholder="put your name"
-          onChange={(e) => setUser({ ...user, lastName: e.target.value })}
-        />
-        <h2>EMAIL</h2>
-        <input
-          type="text"
-          placeholder="put your email"
-          onChange={(e) => setUser({ ...user, email: e.target.value })}
-        />
-        <h2>PASSWORD</h2>
-        <input
-          type="text"
-          placeholder="enter your password"
-          onChange={(e) => setUser({ ...user, password: e.target.value })}
-        />
+    <div className="regContainer">
+      <div className="register">
+        <h1>You are welcome</h1>
+        <div className="regInputs">
+          <h2>Name</h2>
+          <input
+            type="text"
+            placeholder="put your name"
+            onChange={(e) => setUser({ ...user, name: e.target.value })}
+          />
+          <h2>lastName</h2>
+          <input
+            type="text"
+            placeholder="put your name"
+            onChange={(e) => setUser({ ...user, lastName: e.target.value })}
+          />
+          <h2>EMAIL</h2>
+          <input
+            type="text"
+            placeholder="put your email"
+            onChange={(e) => setUser({ ...user, email: e.target.value })}
+          />
+          <h2>PASSWORD</h2>
+          <input
+            type="text"
+            placeholder="enter your password"
+            onChange={(e) => setUser({ ...user, password: e.target.value })}
+          />
+        </div>
+        <h1>{msg}</h1>
+        <button onClick={() => dispatch(userRegister(user))}>REGISTER</button>
+        <h4>
+          you already have a count <Link to="/login"> sign in</Link>
+        </h4>
       </div>
-      <h1>{msg}</h1>
-      <button onClick={() => dispatch(userRegister(user))}>REGISTER</button>
-      <h4>
-        you already have a count <Link to="/login"> sign in</Link>
-      </h4>
     </div>
   );
 };
