@@ -17,6 +17,7 @@ import { useDispatch } from "react-redux";
 import { userCurrent } from "./js/userSlice/userSlice";
 import QuestionCard from "./screen/Play/QuestionCard";
 import QuizList from "./component/QuizList";
+import Footer from "./component/Footer";
 
 function App() {
   const [catSearch, setCatSearch] = useState("IT");
@@ -77,6 +78,7 @@ function App() {
         <Route path="/Dash" element={<AdminDashbord />} />
         <Route path="/quizRules" element={<QuizRules />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
