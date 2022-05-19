@@ -10,7 +10,7 @@ const AddQuiz = () => {
   const [quizz, setQuizz] = useState({
     Name: "",
     Subject: "",
-    Categorie: "",
+    Category: "",
     Questions: [],
   });
   const [nameErr, setNameErr] = useState("");
@@ -29,7 +29,7 @@ const AddQuiz = () => {
     } else {
       setNameErr("");
     }
-    if (quizz.Categorie === "") {
+    if (quizz.Category === "") {
       setCategorieErr("Champ obligatoire");
     } else {
       setCategorieErr("");
@@ -40,7 +40,7 @@ const AddQuiz = () => {
       setSubjectErr("");
     }
 
-    if (quizz.Name !== "" && quizz.Categorie !== "" && quizz.Subject !== "") {
+    if (quizz.Name !== "" && quizz.Category !== "" && quizz.Subject !== "") {
       dispatch(createQuiz(quizz));
       createModals(nbr);
     }
@@ -56,11 +56,28 @@ const AddQuiz = () => {
           onChange={(e) => setQuizz({ ...quizz, Name: e.target.value })}
         />
         <p>{nameErr}</p>
-        <input
+        {/* <input
           type="text"
           placeholder="Quiz Categorie"
           onChange={(e) => setQuizz({ ...quizz, Categorie: e.target.value })}
-        />
+        /> */}
+        <select
+          onChange={(e) => setQuizz({ ...quizz, Category: e.target.value })}
+        >
+          <option value="">Quiz Categorie</option>
+          <option value="IT">IT</option>
+          <option value="Mathematics">Mathematics</option>
+          <option value="History Geography">History Geography</option>
+          <option value="Physical">Physical</option>
+          <option value="Sport">Sport</option>
+          <option value="Countries and capitals">Countries and capitals</option>
+          <option value="Wild world">Wild world</option>
+          <option value="Cinema and series">Cinema and series</option>
+          <option value="Astronomy">Astronomy</option>
+          <option value="Languages">Languages</option>
+          <option value="Cars and bikes">Cars and bikes</option>
+          onChange={(e) => setQuizz({ ...quizz, Category: e.target.value })}
+        </select>
         <p>{categorieErr}</p>
         <input
           type="text"
@@ -73,14 +90,6 @@ const AddQuiz = () => {
           placeholder="Quiz Overview"
           onChange={(e) => setQuizz({ ...quizz, Overview: e.target.value })}
         />
-        <p></p>
-
-        <input
-          type="text"
-          placeholder="Quiz image"
-          onChange={(e) => setQuizz({ ...quizz, image: e.target.value })}
-        />
-        <p></p>
 
         <input
           className="INP1"
@@ -90,7 +99,6 @@ const AddQuiz = () => {
           defaultValue={2}
           onChange={(e) => setNbr(e.target.value)}
         />
-        <p></p>
       </div>
 
       <button className="btn-next" onClick={() => validate()}>

@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
-const Navbar = () => {
-  const [ping, setPing] = useState(false);
+const Navbar = ({ setSearsh, searsh }) => {
   const [isAuth, setIsAuth] = useState();
   useEffect(() => {
     setIsAuth(localStorage.getItem("token"));
@@ -26,7 +25,7 @@ const Navbar = () => {
             <Link to="/about">About as</Link>
           </li>
           <li>
-            <Link to="/quizzes">Quizzes</Link>
+            <Link to="/quizlist">Quiz List</Link>
           </li>
           <li>
             <Link to="/addquiz">AddQuiz</Link>
@@ -34,7 +33,11 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="filter">
-        <input type="text" placeholder="what is your fav categorie" />
+        <input
+          type="text"
+          placeholder="what is your fav Quiz"
+          onChange={(e) => setSearsh(e.target.value)}
+        />
       </div>
       <div className="sign">
         {isAuth ? (

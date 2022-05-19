@@ -38,7 +38,6 @@ const QuestionCard = () => {
           </h1>
           <h2>See you next time !</h2>
           <br />
-          <h3>🦋🦋🦋🦋</h3>
         </div>
       ) : (
         <div className="ques-card" style={{ marginTop: 50 }}>

@@ -1,7 +1,25 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+import { initializeUseSelector } from "react-redux/es/hooks/useSelector";
 import QuizList from "./QuizList";
 
-const Home = () => {
+const Home = ({ setSearsh, searsh }) => {
+  const Cat = [
+    "IT",
+    "Mathematics",
+    "History Geography",
+    "Physical",
+    "Sport",
+    "Countries and capitals",
+    "Wild world",
+    "Cinema and series",
+    "Astronomy",
+    "Languages",
+    "Cars and bikes",
+  ];
+  const [catSearch, setCatSearch] = useState("");
+
   return (
     <div className="linding">
       <div className="Home">
@@ -12,12 +30,26 @@ const Home = () => {
         <button>Login</button>
         <button className="btnR">Register</button>
 
-        <QuizList />
+        <QuizList
+          setSearsh={setSearsh}
+          searsh={searsh}
+          catSearch={catSearch}
+          setCatSearch={setCatSearch}
+        />
       </div>
       <div className="list-categories">
         <h1>Categories</h1>
         <ul>
-          <li>IT</li>
+          {Cat.map((el) => (
+            <li
+              onClick={() => {
+                setCatSearch(el);
+              }}
+            >
+              {el}
+            </li>
+          ))}
+          {/* <li>IT</li>
           <li>Mathematics</li>
           <li>History Geography</li>
           <li>Physical</li>
@@ -27,7 +59,7 @@ const Home = () => {
           <li>Cinema and series</li>
           <li>Astronomy</li>
           <li>Languages</li>
-          <li>Cars and bikes</li>
+          <li>Cars and bikes</li> */}
         </ul>
       </div>
     </div>

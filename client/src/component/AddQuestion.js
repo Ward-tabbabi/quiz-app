@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { addQuestion, createQuiz, AddQuiz } from "../js/quizSlice/QuizSlice";
 
 const AddQuestion = ({ nbr, quizz, setQuizz }) => {
@@ -128,8 +128,11 @@ const AddQuestion = ({ nbr, quizz, setQuizz }) => {
               )
           )
       ) : (
-        <div>
-          <h1 onClick={() => handleSend()}> confirmer </h1>
+        <div className="confirm">
+          <h1 onClick={() => handleSend()}>
+            you have successfully made your own quiz you can
+            <br /> <Link to="/"> confirm it now</Link>
+          </h1>
         </div>
       )}
     </div>

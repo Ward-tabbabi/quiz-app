@@ -1,5 +1,6 @@
 /******************quiz***************************/
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
 .Quiz {
   background-color: white;
   width: 750px;
@@ -29,6 +30,16 @@
 
 .QuizInputs input {
   width: 650px;
+  margin: 5px 30px;
+  /* background-color: aqua; */
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 15px;
+  /* border: none; */
+  outline: none;
+}
+.QuizInputs select {
+  width: 680px;
   margin: 5px 30px;
   /* background-color: aqua; */
   border: 1px solid rgba(0, 0, 0, 0.5);
@@ -180,6 +191,10 @@
   font-size: large;
 }
 /******QUIZLIST*********/
+.SmallCard {
+  width: 80%;
+  flex-wrap: wrap;
+}
 
 .quizlist {
   width: 30%;
@@ -497,8 +512,8 @@
 }
 /*******************CARD BEFORE QUIZE***********/
 .SQContainer {
-  width: 90%;
-  margin-top: 200px;
+  width: 80%;
+  margin: 200px auto;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -519,4 +534,12 @@
   height: 40px;
   color: #6dd3ec;
   background-color: rgb(255, 255, 255);
+}
+.confirm {
+}
+.confirm a {
+  color: green;
+}
+.confirm h1 {
+  padding: 10px 20px;
 }

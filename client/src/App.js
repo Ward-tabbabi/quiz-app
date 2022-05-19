@@ -3,7 +3,6 @@ import "./App.css";
 import PrivateRoute from "./routes/PrivateRoute";
 
 import Index from "./screen/Play/Index";
-import AddQuestion from "./component/AddQuestion";
 import AddQuiz from "./component/AddQuiz";
 import AdminDashbord from "./component/AdminDashbord";
 import Home from "./component/Home";
@@ -17,8 +16,11 @@ import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { userCurrent } from "./js/userSlice/userSlice";
 import QuestionCard from "./screen/Play/QuestionCard";
+import QuizList from "./component/QuizList";
 
 function App() {
+  const [catSearch, setCatSearch] = useState("IT");
+  const [searsh, setSearsh] = useState("");
   const isAuth = localStorage.getItem("token");
   const dispatch = useDispatch();
   const [ping, setping] = useState(false);
@@ -31,9 +33,25 @@ function App() {
   }, []);
   return (
     <div>
-      <Navbar ping={ping} setping={setping} isAuth />
+      <Navbar
+        ping={ping}
+        setping={setping}
+        isAuth
+        setSearsh={setSearsh}
+        searsh={searsh}
+      />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route
+          path="/"
+          element={
+            <Home
+              setSearsh={setSearsh}
+              searsh={searsh}
+              catSearch={catSearch}
+              setCatSearch={setCatSearch}
+            />
+          }
+        />
         <Route path="/about" element={<About />} />
         <Route path="/quizzes" element={<Index />} />
 
@@ -42,7 +60,17 @@ function App() {
         <Route element={<PrivateRoute />}>
           <Route path="/addquiz" element={<AddQuiz />} />
         </Route>
-
+        <Route
+          path="/quizlist"
+          element={
+            <QuizList
+              setSearsh={setSearsh}
+              searsh={searsh}
+              catSearch={catSearch}
+              setCatSearch={setCatSearch}
+            />
+          }
+        />
         {/* <Route path="/addquestion" element={<AddQuestion />} /> */}
         <Route path="/Question" element={<Question />} />
         <Route path="/card" element={<QuestionCard />} />

@@ -10,7 +10,7 @@ const quizSchema = new mongoose.Schema({
 
   image: { type: String },
 
-  creationDate: { type: Date, default: new Date() },
+  // creationDate: { stype: Date, default: new Date() },
 
   Questions: [
     {
